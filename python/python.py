@@ -3,13 +3,15 @@ data = file.read()
 file.close()
 
 symbols= ["_","-","/","_","-","/","_","-","/","_","-","/","_","-","/"]
-splited=data.split()
-
-
+splitted=data.split()
+count=len(splitted)
+print(count)
 i=0
-for word in splited:
+for word in splitted:
         with open ('fileTwo.txt','a') as file:
                 file.write(word)
+                if i == (count-1):
+                        break
                 file.write(symbols[i])
                 i+=1
                     
